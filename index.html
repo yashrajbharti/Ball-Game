@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Find the Ball</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./style.css">
+	<link rel="manifest" href="./manifest.json">
+	<meta name="theme-color" content="#0f1418">
+	<link rel="shortcut icon" href="/icons/icon-192x192.png" type="image/x-icon">
+</head>
+
+<body>
+	<main>
+		<div id="game">
+			<div class="cup"></div>
+			<div class="cup"></div>
+			<div class="cup"></div>
+			<div class="ball"></div>
+			<div id="game-result"></div>
+		</div>
+
+		<button id="btn-play">Play Game</button>
+	</main>
+	<script src='./js/jquery.js'></script>
+	<script src='./js/transit.js'></script>
+	<script src="./script.js"></script>
+	<script>
+		if ('serviceWorker' in navigator) {
+			window.addEventListener('load', () => {
+				navigator.serviceWorker.register('./service-worker.js')
+					.then((registration) => {
+						console.log('Service Worker registered with scope:', registration.scope);
+					})
+					.catch((error) => {
+						console.log('Service Worker registration failed:', error);
+					});
+			});
+		}
+	</script>
+
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+:root,
+:host {
+	--md-sys-color-background: #0f1418;
+	--md-sys-color-on-background: #dee3e8;
+	--md-sys-color-surface: #0f1418;
+	--md-sys-color-surface-dim: #0f1418;
+	--md-sys-color-surface-bright: #353a3e;
+	--md-sys-color-surface-container-lowest: #0a0f12;
+	--md-sys-color-surface-container-low: #171c20;
+	--md-sys-color-surface-container: #1b2024;
+	--md-sys-color-surface-container-high: #252b2f;
+	--md-sys-color-surface-container-highest: #303539;
+	--md-sys-color-on-surface: #dee3e8;
+	--md-sys-color-surface-variant: #3e484f;
+	--md-sys-color-on-surface-variant: #bdc8d1;
+	--md-sys-color-inverse-surface: #dee3e8;
+	--md-sys-color-inverse-on-surface: #2c3135;
+	--md-sys-color-outline: #87929a;
+	--md-sys-color-outline-variant: #3e484f;
+	--md-sys-color-shadow: #000000;
+	--md-sys-color-scrim: #000000;
+	--md-sys-color-surface-tint: #7ed0ff;
+	--md-sys-color-primary: #afdfff;
+	--md-sys-color-on-primary: #00344a;
+	--md-sys-color-primary-container: #36bbf8;
+	--md-sys-color-on-primary-container: #002839;
+	--md-sys-color-inverse-primary: #00658b;
+	--md-sys-color-secondary: #a4cce6;
+	--md-sys-color-on-secondary: #02344a;
+	--md-sys-color-secondary-container: #194459;
+	--md-sys-color-on-secondary-container: #b1daf4;
+	--md-sys-color-tertiary: #f2ceff;
+	--md-sys-color-on-tertiary: #4d0f6c;
+	--md-sys-color-tertiary-container: #d998f8;
+	--md-sys-color-on-tertiary-container: #41005e;
+	--md-sys-color-error: #ffb4ab;
+	--md-sys-color-on-error: #690005;
+	--md-sys-color-error-container: #93000a;
+	--md-sys-color-on-error-container: #ffdad6;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+	display: grid;
+	place-items: center;
+	block-size: 100dvh;
+	background-color: var(--md-sys-color-background);
+}
+
+#game {
+	display: inline-block;
+	position: relative;
+}
+
+#game .cup {
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-bottom: 130px solid var(--md-sys-color-primary);
+	height: 0;
+	cursor: pointer;
+	float: left;
+	margin: 0 20px;
+	position: relative;
+	width: 70px;
+	border-radius: 40px 40px 5px 5px;
+}
+
+#game .ball {
+	display: none;
+	background: var(--md-sys-color-error-container);
+	border-radius: 50%;
+	height: 20px;
+	width: 20px;
+	margin-left: 65px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+#game-result {
+	display: none;
+	position: absolute;
+	top: -50px;
+	left: 0;
+	right: 0;
+	font-size: 28px;
+	color: var(--md-sys-color-primary);
+	text-align: center;
+}
+
+#btn-play {
+	background: var(--md-sys-color-surface-container);
+	border: none;
+	color: var(--md-sys-color-primary);
+	font-size: 20px;
+	border-radius: 5px;
+	cursor: pointer;
+	display: block;
+	margin: 25px auto;
+	padding: 10px 15px;
+}
+
+#btn-play:hover {
+	background: var(--md-sys-color-surface-container-high);
+}
