@@ -51,6 +51,7 @@ body {
 #game {
 	display: inline-block;
 	position: relative;
+	white-space: nowrap;
 }
 
 #game .cup {
@@ -103,4 +104,64 @@ body {
 
 #btn-play:hover {
 	background: var(--md-sys-color-surface-container-high);
+}
+
+/* Rotate 90deg for phone mode (768px and below) */
+@media screen and (max-width: 768px) {
+	body {
+		transform: rotate(-90deg);
+	}
+
+	#game .cup {
+		border-left: 15px solid transparent;
+		border-right: 15px solid transparent;
+		border-bottom: 100px solid var(--md-sys-color-primary);
+		width: 50px;
+		margin: 0 12px;
+		border-radius: 30px 30px 5px 5px;
+	}
+
+	#game .ball {
+		height: 15px;
+		width: 15px;
+		margin-left: 47.5px;
+	}
+
+	#game-result {
+		font-size: 24px;
+		top: -40px;
+	}
+
+	#btn-play {
+		font-size: 18px;
+		padding: 8px 12px;
+	}
+}
+
+/* Extra small phones */
+@media screen and (max-width: 480px) {
+	#game .cup {
+		border-left: 12px solid transparent;
+		border-right: 12px solid transparent;
+		border-bottom: 85px solid var(--md-sys-color-primary);
+		width: 42px;
+		margin: 0 10px;
+		border-radius: 25px 25px 5px 5px;
+	}
+
+	#game .ball {
+		height: 12px;
+		width: 12px;
+		margin-left: 39px;
+	}
+
+	#game-result {
+		font-size: 20px;
+		top: -35px;
+	}
+
+	#btn-play {
+		font-size: 16px;
+		padding: 6px 10px;
+	}
 }
